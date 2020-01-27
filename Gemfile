@@ -41,6 +41,13 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# image uploads to Amazon 53
+gem 'carrierwave', '~> 0.11.2'
+gem 'fog', '~> 2.2'
+
+#image resizing
+gem 'mini_magick', '~> 4.10', '>= 4.10.1'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
@@ -56,6 +63,9 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  #local environemnt variables
+  gem 'figaro'
 end
 
 group :test do
