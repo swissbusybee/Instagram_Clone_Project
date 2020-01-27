@@ -3,21 +3,41 @@
    <div class="col-8">
     <% @posts.each do |post| %>
     <div class="insta-post">
-      <div class="post-meta p-4">
-        <% image_tag post.account.image.thumb.url, class: "img-circle" %>
-        <% post.account.username %>
+      <div class="post-meta">
+        <% link_to image_tag(post.account.image.thumb.url, class: "img-circle"), profile_path(post.account.username) %>
+        <% link_to post.account.username, profile_path(post.account.username), class: "text-dark" %>
       </div>
 
         <%= image_tag post.image.url, class: "img img-fluid" %>
+
+        <div class="post-details">
+
+          <div class="post-actions">
+            <i class="fa fa-heart fa-2x post-like"></i>
+            <i class="fa fa-comment fa-2x post-comment"></i>
+          </div>
+
+          <p><strong><%= post.total_likes %> likes</strong></p>
+          <p><strong><%= link_to post.account.username, profile_path(post.account.username), class: "text-dark" %></strong></p>
+
+            <%= simple_format post.description %>
+
+         <p class="text-muted"><%= time_ago_in_words post.created_at %> ago</p>
+       </div>
       </div>
      <% end %>
     </div>
     <div class="col-4">
       <div class="account-summary">
-        <p><strong><%= current_account.username %></strong><br />
-        <%= current_account.full_name %></p>
+        <p>
+          <% link_to image_tag(current_account.image.thumb.url, class: "img-circle"), profile_path(current_account.username) if current_account.image.present? %>
+          <strong><%= current_account.username %></strong>
+        </p>
+        <p><%= current_account.full_name %></p>
         </div>
-        <div class= "follower-suggestions" >
+        <div class= "follower-suggestions">
+          <%= link_to "View All", "#" , class: "float-right text-dark" %>
+          <p class="text-muted"><strong>Suggestions for you</strong></p>
         </div>
     </div>
   </div>

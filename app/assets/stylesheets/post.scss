@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  src: font-url('fa-solid-900.eot') format("eot");
+  src: font-url('fa-solid-900.svg') format("svg");
+  src: font-url('fa-solid-900.ttf') format("ttf");
+  src: font-url('fa-solid-900.woff') format("woff");
+  src: font-url('fa-solid-900.woff2') format("woff2");
+  src: font-url('fa-regular-400.eot') format("eot");
+  src: font-url('fa-regular-400.svg') format("svg");
+  src: font-url('fa-regular-400.ttf') format("ttf");
+  src: font-url('fa-regular-400.woff') format("woff");
+  src: font-url('fa-regular-400.woff2') format("woff2");
+}
+
 .insta-post {
 margin-bottom: 15px;
 }
@@ -13,5 +27,25 @@ border: 1px solid #ddd;
 
 img {
   margin-right: 10px;
+  }
 }
+
+.post-details {
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+.post-actions {
+  margin-bottom: 20px;
+  font-family: FontAwesome;
+  i {
+    margin-right: 10px;
+    color: #ddd;
+    cursor: pointer;
+  }
+}
+
+i:hover {
+  color: #999;
 }
