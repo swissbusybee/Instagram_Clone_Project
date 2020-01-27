@@ -1,5 +1,7 @@
 # README
 
+#Note to Me: Left off at 23.52 seconds of the youtube video. (https://www.youtube.com/watch?v=yhg7hd3ogJ8)
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
